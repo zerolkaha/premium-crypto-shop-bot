@@ -1,0 +1,7 @@
+config/.env
+database.db
+shop.db
+__pycache__/
+*.pyc
+.idea/
+.claude/
