@@ -3,7 +3,11 @@ import os
 
 
 # Путь к файлу базы данных
-DB_PATH = os.path.join(os.path.dirname(__file__), 'shop.db')
+if os.path.exists('/data'):
+    DB_PATH = '/data/shop.db'
+else:
+    # Локально на компьютере база будет создаваться как обычно рядом с кодом
+    DB_PATH = 'shop.db'
 
 
 async def init_db():
